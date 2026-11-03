@@ -1,0 +1,32 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/about", "destination": "/#about", "permanent": true },
+    { "source": "/courses", "destination": "/#courses", "permanent": true },
+    { "source": "/contact", "destination": "/#contact", "permanent": true },
+    { "source": "/intro.mp4", "destination": "/videos/intro.mp4", "permanent": true },
+    { "source": "/review1.mp4", "destination": "/videos/review1.mp4", "permanent": true },
+    { "source": "/review2.mp4", "destination": "/videos/review2.mp4", "permanent": true },
+    { "source": "/review3.mp4", "destination": "/videos/review3.mp4", "permanent": true },
+    { "source": "/logoofcodebloomapp.png", "destination": "/thumbnails/logoofcodebloomapp.png", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "index, follow" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/(images|thumbnails|videos)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }
+      ]
+    }
+  ]
+}

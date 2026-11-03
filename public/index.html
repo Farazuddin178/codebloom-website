@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CodeBloomAPP | Learn to Code Creatively</title>
+  <meta name="description" content="Learn coding online with CodeBloomAPP! Courses for kids (7+), teens, and professionals in Python, Web Development, AI/ML, Data Science, App & Game Development. Get certifications and hands-on project experience. Free demo class available!">
+  <meta name="keywords" content="coding courses, Python course, JavaScript course, AI ML courses, web development, app development, game development, coding for kids, coding for beginners, online coding academy, coding certifications, project-based learning">
+  <meta name="author" content="CodeBloomAPP">
+  <meta name="theme-color" content="#1a1626">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Shippori+Mincho:wght@600;700&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <script type="importmap">
+    { "imports": { "three": "/vendor/three/three.module.min.js" } }
+  </script>
+  <link rel="modulepreload" href="/vendor/three/three.module.min.js">
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="CodeBloomAPP | Learn to Code Creatively">
+  <meta property="og:description" content="Where Coding Meets Creativity — And Futures Begin. Book your free coding demo today!">
+  <meta property="og:image" content="https://learn.codebloomapp.com/socialmedia.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://learn.codebloomapp.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CodeBloomAPP | Learn to Code Creatively">
+  <meta name="twitter:description" content="Fun & creative coding courses for kids, teens, and professionals.">
+  <meta name="twitter:image" content="https://learn.codebloomapp.com/socialmedia.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "CodeBloomAPP",
+        "url": "https://learn.codebloomapp.com",
+        "logo": "https://learn.codebloomapp.com/thumbnails/logoofcodebloomapp.png",
+        "sameAs": [
+          "https://www.facebook.com/people/codebloomapp/61579468022248/",
+          "https://www.instagram.com/learn.codebloomapp?igsh=MXdnM24wYjcxYXBrMg%3D%3D&utm_source=qr",
+          "https://www.linkedin.com/groups/14789058",
+          "https://www.threads.net/@learn.codebloomapp",
+          "https://x.com/codebloomapp",
+          "https://www.youtube.com/@learn.codebloomapp"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-7569765474",
+          "contactType": "customer support",
+          "availableLanguage": ["English", "Hindi"]
+        }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Intro to Coding with CodeBloomAPP",
+        "description": "Discover how CodeBloomAPP helps kids, teens, and professionals learn coding creatively.",
+        "thumbnailUrl": "https://learn.codebloomapp.com/thumbnails/logoofcodebloomapp.png",
+        "uploadDate": "2025-08-10T08:00:00+00:00",
+        "duration": "PT39S",
+        "contentUrl": "https://learn.codebloomapp.com/videos/intro.mp4",
+        "embedUrl": "https://learn.codebloomapp.com/videos/intro.mp4",
+        "publisher": { "@type": "Organization", "name": "CodeBloomAPP", "logo": { "@type": "ImageObject", "url": "https://learn.codebloomapp.com/thumbnails/logoofcodebloomapp.png" } }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Student Review - Mohammad Zaki-ur-Rahman",
+        "description": "Mohammad Zaki-ur-Rahman shares his experience learning Python at CodeBloomAPP.",
+        "thumbnailUrl": "https://learn.codebloomapp.com/thumbnails/zaki.jpeg",
+        "uploadDate": "2025-08-12T08:00:00+00:00",
+        "duration": "PT20S",
+        "contentUrl": "https://learn.codebloomapp.com/videos/review1.mp4",
+        "embedUrl": "https://learn.codebloomapp.com/videos/review1.mp4",
+        "publisher": { "@type": "Organization", "name": "CodeBloomAPP", "logo": { "@type": "ImageObject", "url": "https://learn.codebloomapp.com/thumbnails/logoofcodebloomapp.png" } }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Student Review - Deva's Mom",
+        "description": "Deva's mom talks about learning Data Science at CodeBloomAPP.",
+        "thumbnailUrl": "https://learn.codebloomapp.com/thumbnails/deva.jpeg",
+        "uploadDate": "2025-08-13T08:00:00+00:00",
+        "duration": "PT1M06S",
+        "contentUrl": "https://learn.codebloomapp.com/videos/review2.mp4",
+        "embedUrl": "https://learn.codebloomapp.com/videos/review2.mp4",
+        "publisher": { "@type": "Organization", "name": "CodeBloomAPP", "logo": { "@type": "ImageObject", "url": "https://learn.codebloomapp.com/thumbnails/logoofcodebloomapp.png" } }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Student Review - Riann's Mom",
+        "description": "Riann's mom shares how CodeBloomAPP helped her child build real-world coding projects.",
+        "thumbnailUrl": "https://learn.codebloomapp.com/thumbnails/riann.jpeg",
+        "uploadDate": "2025-08-14T08:00:00+00:00",
+        "duration": "PT15S",
+        "contentUrl": "https://learn.codebloomapp.com/videos/review3.mp4",
+        "embedUrl": "https://learn.codebloomapp.com/videos/review3.mp4",
+        "publisher": { "@type": "Organization", "name": "CodeBloomAPP", "logo": { "@type": "ImageObject", "url": "https://learn.codebloomapp.com/thumbnails/logoofcodebloomapp.png" } }
+      }
+    ]
+  }
+  </script>
+
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="module" src="/assets/site.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYZ1CCB7T1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CYZ1CCB7T1');
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1070019101883430');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1070019101883430&ev=PageView&noscript=1"></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  <!-- Icons (Font Awesome Free 6.5.0, CC BY 4.0 — https://fontawesome.com/license/free) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-facebook" viewBox="0 0 512 512"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></symbol>
+    <symbol id="i-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l10.6-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z"/></symbol>
+  </svg>
+
+  <!-- The 3D valley lives behind everything -->
+  <canvas id="valley" aria-hidden="true"></canvas>
+  <div class="scene-shade" aria-hidden="true"></div>
+
+  <header class="topbar" id="top">
+    <a class="brand" href="#top" aria-label="CodeBloomAPP home">
+      <img src="/images/logo-160.webp" alt="CodeBloomAPP Logo" width="44" height="44">
+      <span>CodeBloom<small>APP</small></span>
+    </a>
+    <nav class="nav" id="siteNav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#demo">Free Demo</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-gold btn-sm topbar-cta" href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener">Book Now</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="petal-mark" aria-hidden="true"></span>CodeBloomAPP · Learn to Code Creatively</p>
+        <h1 class="hero-title">Where Coding Meets Creativity <em>— And Futures Begin</em></h1>
+        <p class="hero-sub">Book Your Free Coding Demo Today!</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener">Book Now</a>
+          <a class="btn btn-ghost" href="#courses">Courses Offered</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#welcome"><span>Scroll to drift downriver</span><i aria-hidden="true"></i></a>
+    </section>
+
+    <!-- Intro video -->
+    <section class="chapter" id="welcome">
+      <div class="chapter-head reveal">
+        <p class="chapter-no">01 — Welcome</p>
+      </div>
+      <div class="video-frame reveal">
+        <video id="introVideo" muted playsinline preload="metadata" poster="/images/intro-poster.webp" width="720" height="480" aria-label="Intro video about CodeBloomAPP">
+          <source src="/videos/intro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-controls">
+          <button type="button" class="pill-btn" id="playPauseBtn">⏸ Pause</button>
+          <button type="button" class="pill-btn" id="introSoundBtn">🔇 Unmute</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="chapter" id="about">
+      <div class="about-grid">
+        <div class="chapter-head reveal">
+          <p class="chapter-no">02 — About</p>
+          <h2 class="chapter-title"><span class="emoji">🌟</span> About CodeBloom<small>APP</small> <span class="emoji">🌟</span></h2>
+          <p class="motto">🌈 <em>Learn to Code. Grow Creatively. Thrive Technologically.</em></p>
+        </div>
+        <div class="panel about-panel reveal">
+          <p>Welcome to <strong>CodeBloom<small>APP</small></strong> — where curious minds blossom into confident creators! 🌱💻</p>
+          <p>We believe coding isn’t just about syntax and semicolons — it’s an adventure, a creative playground, and a powerful tool to shape the future. Whether you're a tiny techie taking your first steps or a teen genius ready to launch their big idea, we’re here to light that spark! 🔥✨</p>
+          <p>At CodeBloom<small>APP</small>, learning is never boring. From magical animations to interactive projects, we turn lessons into experiences and learners into innovators. 🚀🎨</p>
+          <blockquote>“Every line of code you write plants a seed of creativity. Let’s grow a garden of possibilities.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="chapter" id="courses">
+      <div class="chapter-head center reveal">
+        <p class="chapter-no">03 — Courses</p>
+        <h2 class="chapter-title">Courses Offered</h2>
+      </div>
+
+      <div class="levels">
+        <article class="card level reveal">
+          <div class="card-media"><img src="/images/beginner-800.webp" srcset="/images/beginner-400.webp 400w, /images/beginner-800.webp 800w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="800" height="489" loading="lazy" decoding="async" alt="Beginner Course"></div>
+          <div class="card-body">
+            <span class="chip">Ages 7–14</span>
+            <h3 class="card-title">Beginner Level</h3>
+            <p class="card-text">Ideal for kids aged 7–14. Starts with block-based coding, transitioning to HTML, CSS, JavaScript, and Python. Fun, engaging, and foundational!</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-gold btn-block">Enroll Now</a>
+          </div>
+        </article>
+        <article class="card level reveal">
+          <div class="card-media"><img src="/images/advanced-800.webp" srcset="/images/advanced-800.webp 359w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="359" height="640" loading="lazy" decoding="async" alt="Advanced Course"></div>
+          <div class="card-body">
+            <span class="chip">Ages 13–15</span>
+            <h3 class="card-title">Advanced Level</h3>
+            <p class="card-text">Perfect for ages 13–15. Builds on core logic with HTML, CSS, Python, and introduces cloud computing concepts in a fun way.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-gold btn-block">Enroll Now</a>
+          </div>
+        </article>
+        <article class="card level reveal">
+          <div class="card-media"><img src="/images/professional-800.webp" srcset="/images/professional-400.webp 400w, /images/professional-800.webp 736w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="736" height="736" loading="lazy" decoding="async" alt="Professional Course"></div>
+          <div class="card-body">
+            <span class="chip">Ages 16+</span>
+            <h3 class="card-title">Professional Level</h3>
+            <p class="card-text">Tailored for 16+. Dive deep into Python, AI & ML, Cloud Computing, and IoT. Real-world skills for future-ready learners.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-gold btn-block">Enroll Now</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="chapter-head center sub reveal">
+        <h2 class="chapter-title small">Specialised Courses</h2>
+      </div>
+      <div class="specialised">
+        <article class="card course reveal">
+          <div class="card-media"><img src="/images/python-800.webp" srcset="/images/python-400.webp 400w, /images/python-800.webp 736w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="736" height="1104" loading="lazy" decoding="async" alt="Python"></div>
+          <div class="card-body">
+            <h3 class="card-title">Python Programming</h3>
+            <p class="scope"><span>Future Scope</span>AI, Data Science</p>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+          </div>
+        </article>
+        <article class="card course reveal">
+          <div class="card-media"><img src="/images/cloud-800.webp" srcset="/images/cloud-400.webp 400w, /images/cloud-800.webp 736w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="736" height="736" loading="lazy" decoding="async" alt="Cloud"></div>
+          <div class="card-body">
+            <h3 class="card-title">Cloud Computing</h3>
+            <p class="scope"><span>Future Scope</span>Cloud Architect, DevOps</p>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+          </div>
+        </article>
+        <article class="card course reveal">
+          <div class="card-media"><img src="/images/data-science-800.webp" srcset="/images/data-science-400.webp 400w, /images/data-science-800.webp 736w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="736" height="460" loading="lazy" decoding="async" alt="Data Science"></div>
+          <div class="card-body">
+            <h3 class="card-title">Data Science</h3>
+            <p class="scope"><span>Future Scope</span>Analyst, Researcher</p>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+          </div>
+        </article>
+        <article class="card course reveal">
+          <div class="card-media"><img src="/images/java-800.webp" srcset="/images/java-400.webp 400w, /images/java-800.webp 735w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="735" height="441" loading="lazy" decoding="async" alt="Java"></div>
+          <div class="card-body">
+            <h3 class="card-title">Java Programming</h3>
+            <p class="scope"><span>Future Scope</span>Android Dev, Backend</p>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+          </div>
+        </article>
+        <article class="card course reveal">
+          <div class="card-media"><img src="/images/react-800.webp" srcset="/images/react-400.webp 400w, /images/react-800.webp 690w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="690" height="500" loading="lazy" decoding="async" alt="React.js"></div>
+          <div class="card-body">
+            <h3 class="card-title">React.js</h3>
+            <p class="scope"><span>Future Scope</span>Web App Dev</p>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+          </div>
+        </article>
+        <article class="card course reveal">
+          <div class="card-media"><img src="/images/javascript-800.webp" srcset="/images/javascript-400.webp 400w, /images/javascript-800.webp 554w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="554" height="554" loading="lazy" decoding="async" alt="JS"></div>
+          <div class="card-body">
+            <h3 class="card-title">JavaScript</h3>
+            <p class="scope"><span>Future Scope</span>Frontend Dev</p>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+          </div>
+        </article>
+        <article class="card course reveal">
+          <div class="card-media"><img src="/images/cyber-security-800.webp" srcset="/images/cyber-security-400.webp 400w, /images/cyber-security-800.webp 736w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="736" height="736" loading="lazy" decoding="async" alt="Cyber Security"></div>
+          <div class="card-body">
+            <h3 class="card-title">Cyber Security</h3>
+            <p class="scope"><span>Future Scope</span>Ethical Hacker</p>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+          </div>
+        </article>
+        <article class="card course reveal">
+          <div class="card-media"><img src="/images/ai-ml-800.webp" srcset="/images/ai-ml-400.webp 400w, /images/ai-ml-800.webp 736w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="736" height="476" loading="lazy" decoding="async" alt="AI ML"></div>
+          <div class="card-body">
+            <h3 class="card-title">AI &amp; ML with Python</h3>
+            <p class="scope"><span>Future Scope</span>ML Engineer, AI Research</p>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+          </div>
+        </article>
+        <article class="card course reveal">
+          <div class="card-media"><img src="/images/app-game-dev-800.webp" srcset="/images/app-game-dev-400.webp 400w, /images/app-game-dev-800.webp 735w" sizes="(min-width: 960px) 380px, (min-width: 640px) 50vw, 100vw" width="735" height="616" loading="lazy" decoding="async" alt="App Dev"></div>
+          <div class="card-body">
+            <h3 class="card-title">App &amp; Game Development</h3>
+            <p class="scope"><span>Future Scope</span>Game Dev, Mobile Apps</p>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="chapter" id="reviews">
+      <div class="chapter-head center reveal">
+        <p class="chapter-no">04 — Reviews</p>
+        <h2 class="chapter-title">Listen To Our Happy Parents and Students</h2>
+      </div>
+      <div class="reviews">
+        <figure class="card review reveal">
+          <div class="review-media">
+            <video class="review-video" controls playsinline preload="none" poster="/images/review1-poster.webp" aria-label="Review video by Mohammad Zaki-ur-Rahman">
+              <source src="/videos/review1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button type="button" class="play-overlay" aria-label="Play review by Mohammad Zaki-ur-Rahman"><svg><use href="#i-play"/></svg></button>
+          </div>
+          <figcaption class="card-body">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>The instructors are fantastic. Clear explanations and engaging projects.</blockquote>
+            <cite>Mohammad Zaki-ur-Rahman</cite>
+          </figcaption>
+        </figure>
+        <figure class="card review reveal">
+          <div class="review-media">
+            <video class="review-video" controls playsinline preload="none" poster="/images/review2-poster.webp" aria-label="Review video by Deva">
+              <source src="/videos/review2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button type="button" class="play-overlay" aria-label="Play review by Deva"><svg><use href="#i-play"/></svg></button>
+          </div>
+          <figcaption class="card-body">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>Amazing courses! My child learned so much and had fun doing it. Highly recommend!</blockquote>
+            <cite>Deva</cite>
+          </figcaption>
+        </figure>
+        <figure class="card review reveal">
+          <div class="review-media">
+            <video class="review-video" controls playsinline preload="none" poster="/images/review3-poster.webp" aria-label="Review video by Riann">
+              <source src="/videos/review3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button type="button" class="play-overlay" aria-label="Play review by Riann"><svg><use href="#i-play"/></svg></button>
+          </div>
+          <figcaption class="card-body">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>CodeBloomApp has been a wonderful experience for my elder son. He’s enjoying learning so much that I’ve decided to enroll my younger son soon as well.</blockquote>
+            <cite>Riann</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Demo -->
+    <section class="chapter" id="demo">
+      <div class="demo-card panel reveal">
+        <p class="chapter-no">05 — Free Demo</p>
+        <h2 class="chapter-title">Book a Free Demo</h2>
+        <p class="demo-text">Click below to fill out the form and schedule a session with us.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="chapter" id="contact">
+      <div class="chapter-head center reveal">
+        <p class="chapter-no">06 — Contact</p>
+        <h2 class="chapter-title">Contact Us</h2>
+      </div>
+      <div class="social-links reveal">
+        <a href="https://www.facebook.com/share/19t5GMnhoU/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 512 512"><use href="#i-facebook"/></svg></a>
+        <a href="https://www.instagram.com/learn.codebloomapp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 448 512"><use href="#i-instagram"/></svg></a>
+        <a href="mailto:enrolldemo_1@codebloomapp.com" aria-label="Email"><svg viewBox="0 0 512 512"><use href="#i-envelope"/></svg></a>
+        <a href="https://x.com/codebloomapp" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 512 512"><use href="#i-x"/></svg></a>
+        <a href="https://wa.me/message/LM34W22UDTK4C1" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 448 512"><use href="#i-whatsapp"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy;CodeBloom<small>APP</small></p>
+  </footer>
+
+  <!-- Time-of-day readout for the 3D scene -->
+  <div class="hud" id="hud" hidden>
+    <span class="hud-dot" aria-hidden="true"></span>
+    <span class="hud-phase" id="hudPhase">Golden hour</span>
+    <span class="hud-clock" id="hudClock">17:35</span>
+    <button type="button" class="hud-btn" id="sceneToggle" aria-pressed="false">Pause</button>
+  </div>
+</body>
+</html>

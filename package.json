@@ -1,0 +1,9 @@
+{
+  "name": "codebloomapp-website",
+  "version": "2.0.0",
+  "private": true,
+  "description": "CodeBloomAPP landing page — static site deployed on Vercel",
+  "scripts": {
+    "dev": "npx --yes serve@14.2.4 public -l 3000"
+  }
+}

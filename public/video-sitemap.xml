@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Intro Video -->
+  <url>
+    <loc>https://learn.codebloomapp.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://learn.codebloomapp.com/thumbnails/logoofcodebloomapp.png</video:thumbnail_loc>
+      <video:title>Intro to Coding with CodeBloomAPP</video:title>
+      <video:description>Discover how CodeBloomAPP helps kids, teens, and professionals learn coding creatively.</video:description>
+      <video:content_loc>https://learn.codebloomapp.com/videos/intro.mp4</video:content_loc>
+      <video:duration>39</video:duration>
+      <video:publication_date>2025-08-10T08:00:00+00:00</video:publication_date>
+    </video:video>
+  </url>
+
+  <!-- Review 1 -->
+  <url>
+    <loc>https://learn.codebloomapp.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://learn.codebloomapp.com/thumbnails/zaki.jpeg</video:thumbnail_loc>
+      <video:title>Student Review - Mohammad Zaki-ur-Rahman</video:title>
+      <video:description>Mohammad Zaki-ur-Rahman shares his experience learning Python at CodeBloomAPP.</video:description>
+      <video:content_loc>https://learn.codebloomapp.com/videos/review1.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:publication_date>2025-08-12T08:00:00+00:00</video:publication_date>
+    </video:video>
+  </url>
+
+  <!-- Review 2 -->
+  <url>
+    <loc>https://learn.codebloomapp.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://learn.codebloomapp.com/thumbnails/deva.jpeg</video:thumbnail_loc>
+      <video:title>Student Review - Deva's Mom</video:title>
+      <video:description>Deva's mom talks about learning Data Science at CodeBloomAPP.</video:description>
+      <video:content_loc>https://learn.codebloomapp.com/videos/review2.mp4</video:content_loc>
+      <video:duration>66</video:duration>
+      <video:publication_date>2025-08-13T08:00:00+00:00</video:publication_date>
+    </video:video>
+  </url>
+
+  <!-- Review 3 -->
+  <url>
+    <loc>https://learn.codebloomapp.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://learn.codebloomapp.com/thumbnails/riann.jpeg</video:thumbnail_loc>
+      <video:title>Student Review - Riann's Mom</video:title>
+      <video:description>Riann's mom shares how CodeBloomAPP helped her child build real-world coding projects.</video:description>
+      <video:content_loc>https://learn.codebloomapp.com/videos/review3.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:publication_date>2025-08-14T08:00:00+00:00</video:publication_date>
+    </video:video>
+  </url>
+
+</urlset>
