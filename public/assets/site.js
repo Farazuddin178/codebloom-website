@@ -1,4 +1,8 @@
-/* CodeBloomAPP — page behaviour. The 3D valley is loaded after the content is interactive. */
+/* CodeBloomAPP — page behaviour. The 3D background is loaded after the content is interactive. */
+
+// Google Apps Script web app URL that saves bookings to the Google Sheet.
+// Setup steps: README.md → "Booking form → Google Sheet".
+const BOOKING_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwhyCpr2hkD1uPe5b-7tpRrEkw9z7eUYPBi-2JozRxbyVq6FCd7scE1bNUiyZ6y3r0t/exec';
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -87,7 +91,94 @@ function initReviews() {
   document.addEventListener('visibilitychange', () => { if (document.hidden) pauseOthers(null); });
 }
 
-/* ===== 3D valley ===== */
+/* ===== Book a free demo ===== */
+function initBooking() {
+  const dialog = document.getElementById('book');
+  const form = document.getElementById('bookForm');
+  const step = document.getElementById('bookStep');
+  const done = document.getElementById('bookDone');
+  const submit = document.getElementById('bookSubmit');
+  const error = document.getElementById('bookError');
+  const submitLabel = submit.textContent;
+
+  function open(course) {
+    if (course) form.course.value = course;
+    dialog.showModal();
+  }
+
+  function close() {
+    dialog.close();
+    // A finished booking starts fresh next time
+    if (!done.hidden) {
+      form.reset();
+      form.classList.remove('checked');
+      step.hidden = false;
+      done.hidden = true;
+    }
+  }
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-book]');
+    if (!trigger) return;
+    e.preventDefault();
+    open(trigger.dataset.book);
+  });
+  dialog.addEventListener('click', (e) => {
+    // Clicking the dimmed backdrop or a close button
+    if (e.target === dialog || e.target.closest('[data-close]')) close();
+  });
+  dialog.addEventListener('cancel', (e) => { e.preventDefault(); close(); });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    error.hidden = true;
+    if (!form.checkValidity()) {
+      form.classList.add('checked');
+      form.querySelector(':invalid').focus();
+      return;
+    }
+
+    const fields = new FormData(form);
+    const data = new URLSearchParams({
+      parentName: fields.get('parentName').trim(),
+      studentName: fields.get('studentName').trim(),
+      phone: `${fields.get('countryCode')} ${fields.get('phone').trim()}`,
+      email: fields.get('email').trim(),
+      studentAge: fields.get('studentAge'),
+      course: fields.get('course'),
+      preferredTime: fields.get('preferredTime'),
+      hasLaptop: fields.get('hasLaptop'),
+      message: fields.get('message').trim(),
+      website: fields.get('website'),
+      page: location.href
+    });
+
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    try {
+      if (!BOOKING_ENDPOINT) throw new Error('BOOKING_ENDPOINT is not set in site.js');
+      // A plain form-encoded POST: Apps Script accepts it without a CORS preflight
+      const res = await fetch(BOOKING_ENDPOINT, { method: 'POST', body: data });
+      const reply = await res.json();
+      if (reply.result !== 'success') throw new Error(reply.error || 'Booking was not saved');
+
+      document.getElementById('doneName').textContent = data.get('parentName').split(' ')[0];
+      step.hidden = true;
+      done.hidden = false;
+      done.focus();
+      if (window.gtag) gtag('event', 'generate_lead', { course: data.get('course') });
+      if (window.fbq) fbq('track', 'Lead', { content_name: data.get('course') });
+    } catch (err) {
+      console.error('Booking failed', err);
+      error.hidden = false;
+    } finally {
+      submit.disabled = false;
+      submit.textContent = submitLabel;
+    }
+  });
+}
+
+/* ===== 3D background ===== */
 function webglAvailable() {
   try {
     const c = document.createElement('canvas');
@@ -98,34 +189,26 @@ function webglAvailable() {
 }
 
 function initScene() {
-  const canvas = document.getElementById('valley');
-  const hud = document.getElementById('hud');
+  const canvas = document.getElementById('scene');
+  const toggle = document.getElementById('sceneToggle');
   if (!canvas || !webglAvailable()) return;
 
   const start = async () => {
     try {
-      const { startValley } = await import('./scene/main.js');
-      const phase = document.getElementById('hudPhase');
-      const clock = document.getElementById('hudClock');
-      const toggle = document.getElementById('sceneToggle');
-
-      const valley = startValley(canvas, {
+      const { startNetwork } = await import('./scene/network.js');
+      const network = startNetwork(canvas, {
         reducedMotion: reduceMotion,
-        onPhase: ({ label, clock: time }) => {
-          phase.textContent = label;
-          clock.textContent = time;
-        },
         onFirstFrame: () => {
           document.documentElement.classList.add('scene-ready');
-          hud.hidden = false;
+          toggle.hidden = false;
         }
       });
 
       const setLabel = () => {
-        toggle.textContent = valley.paused ? 'Play' : 'Pause';
-        toggle.setAttribute('aria-pressed', String(valley.paused));
+        toggle.textContent = network.paused ? 'Play animation' : 'Pause animation';
+        toggle.setAttribute('aria-pressed', String(network.paused));
       };
-      toggle.addEventListener('click', () => { valley.setPaused(!valley.paused); setLabel(); });
+      toggle.addEventListener('click', () => { network.setPaused(!network.paused); setLabel(); });
       setLabel();
     } catch (err) {
       console.error('3D scene failed to load', err);
@@ -141,4 +224,5 @@ initHeader();
 initReveal();
 initIntroVideo();
 initReviews();
+initBooking();
 initScene();

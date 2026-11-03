@@ -7,14 +7,14 @@
   <meta name="description" content="Learn coding online with CodeBloomAPP! Courses for kids (7+), teens, and professionals in Python, Web Development, AI/ML, Data Science, App & Game Development. Get certifications and hands-on project experience. Free demo class available!">
   <meta name="keywords" content="coding courses, Python course, JavaScript course, AI ML courses, web development, app development, game development, coding for kids, coding for beginners, online coding academy, coding certifications, project-based learning">
   <meta name="author" content="CodeBloomAPP">
-  <meta name="theme-color" content="#1a1626">
+  <meta name="theme-color" content="#0a0c1f">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Shippori+Mincho:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="./assets/site.css">
 
   <script type="importmap">
@@ -150,8 +150,8 @@
     <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l10.6-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z"/></symbol>
   </svg>
 
-  <!-- The 3D valley lives behind everything -->
-  <canvas id="valley" aria-hidden="true"></canvas>
+  <!-- The 3D knowledge network lives behind everything -->
+  <canvas id="scene" aria-hidden="true"></canvas>
   <div class="scene-shade" aria-hidden="true"></div>
 
   <header class="topbar" id="top">
@@ -165,7 +165,7 @@
       <a href="#demo">Free Demo</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn btn-gold btn-sm topbar-cta" href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener">Book Now</a>
+    <a class="btn btn-gold btn-sm topbar-cta" href="#book" data-book="">Book Now</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
       <span></span><span></span>
     </button>
@@ -179,18 +179,15 @@
         <h1 class="hero-title">Where Coding Meets Creativity <em>— And Futures Begin</em></h1>
         <p class="hero-sub">Book Your Free Coding Demo Today!</p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener">Book Now</a>
+          <a class="btn btn-gold" href="#book" data-book="">Book Now</a>
           <a class="btn btn-ghost" href="#courses">Courses Offered</a>
         </div>
       </div>
-      <a class="scroll-cue" href="#welcome"><span>Scroll to drift downriver</span><i aria-hidden="true"></i></a>
+      <a class="scroll-cue" href="#welcome"><span>Scroll to explore</span><i aria-hidden="true"></i></a>
     </section>
 
     <!-- Intro video -->
     <section class="chapter" id="welcome">
-      <div class="chapter-head reveal">
-        <p class="chapter-no">01 — Welcome</p>
-      </div>
       <div class="video-frame reveal">
         <video id="introVideo" muted playsinline preload="metadata" poster="./images/intro-poster.webp" width="720" height="480" aria-label="Intro video about CodeBloomAPP">
           <source src="./videos/intro.mp4" type="video/mp4">
@@ -207,7 +204,6 @@
     <section class="chapter" id="about">
       <div class="about-grid">
         <div class="chapter-head reveal">
-          <p class="chapter-no">02 — About</p>
           <h2 class="chapter-title"><span class="emoji">🌟</span> About CodeBloom<small>APP</small> <span class="emoji">🌟</span></h2>
           <p class="motto">🌈 <em>Learn to Code. Grow Creatively. Thrive Technologically.</em></p>
         </div>
@@ -223,7 +219,6 @@
     <!-- Courses -->
     <section class="chapter" id="courses">
       <div class="chapter-head center reveal">
-        <p class="chapter-no">03 — Courses</p>
         <h2 class="chapter-title">Courses Offered</h2>
       </div>
 
@@ -234,7 +229,7 @@
             <span class="chip">Ages 7–14</span>
             <h3 class="card-title">Beginner Level</h3>
             <p class="card-text">Ideal for kids aged 7–14. Starts with block-based coding, transitioning to HTML, CSS, JavaScript, and Python. Fun, engaging, and foundational!</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-gold btn-block">Enroll Now</a>
+            <a href="#book" data-book="Beginner Level" class="btn btn-gold btn-block">Enroll Now</a>
           </div>
         </article>
         <article class="card level reveal">
@@ -243,7 +238,7 @@
             <span class="chip">Ages 13–15</span>
             <h3 class="card-title">Advanced Level</h3>
             <p class="card-text">Perfect for ages 13–15. Builds on core logic with HTML, CSS, Python, and introduces cloud computing concepts in a fun way.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-gold btn-block">Enroll Now</a>
+            <a href="#book" data-book="Advanced Level" class="btn btn-gold btn-block">Enroll Now</a>
           </div>
         </article>
         <article class="card level reveal">
@@ -252,7 +247,7 @@
             <span class="chip">Ages 16+</span>
             <h3 class="card-title">Professional Level</h3>
             <p class="card-text">Tailored for 16+. Dive deep into Python, AI & ML, Cloud Computing, and IoT. Real-world skills for future-ready learners.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-gold btn-block">Enroll Now</a>
+            <a href="#book" data-book="Professional Level" class="btn btn-gold btn-block">Enroll Now</a>
           </div>
         </article>
       </div>
@@ -266,7 +261,7 @@
           <div class="card-body">
             <h3 class="card-title">Python Programming</h3>
             <p class="scope"><span>Future Scope</span>AI, Data Science</p>
-            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="#book" data-book="Python Programming" class="link-arrow">Enroll Now</a></div>
           </div>
         </article>
         <article class="card course reveal">
@@ -274,7 +269,7 @@
           <div class="card-body">
             <h3 class="card-title">Cloud Computing</h3>
             <p class="scope"><span>Future Scope</span>Cloud Architect, DevOps</p>
-            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="#book" data-book="Cloud Computing" class="link-arrow">Enroll Now</a></div>
           </div>
         </article>
         <article class="card course reveal">
@@ -282,7 +277,7 @@
           <div class="card-body">
             <h3 class="card-title">Data Science</h3>
             <p class="scope"><span>Future Scope</span>Analyst, Researcher</p>
-            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="#book" data-book="Data Science" class="link-arrow">Enroll Now</a></div>
           </div>
         </article>
         <article class="card course reveal">
@@ -290,7 +285,7 @@
           <div class="card-body">
             <h3 class="card-title">Java Programming</h3>
             <p class="scope"><span>Future Scope</span>Android Dev, Backend</p>
-            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="#book" data-book="Java Programming" class="link-arrow">Enroll Now</a></div>
           </div>
         </article>
         <article class="card course reveal">
@@ -298,7 +293,7 @@
           <div class="card-body">
             <h3 class="card-title">React.js</h3>
             <p class="scope"><span>Future Scope</span>Web App Dev</p>
-            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="#book" data-book="React.js" class="link-arrow">Enroll Now</a></div>
           </div>
         </article>
         <article class="card course reveal">
@@ -306,7 +301,7 @@
           <div class="card-body">
             <h3 class="card-title">JavaScript</h3>
             <p class="scope"><span>Future Scope</span>Frontend Dev</p>
-            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="#book" data-book="JavaScript" class="link-arrow">Enroll Now</a></div>
           </div>
         </article>
         <article class="card course reveal">
@@ -314,7 +309,7 @@
           <div class="card-body">
             <h3 class="card-title">Cyber Security</h3>
             <p class="scope"><span>Future Scope</span>Ethical Hacker</p>
-            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="#book" data-book="Cyber Security" class="link-arrow">Enroll Now</a></div>
           </div>
         </article>
         <article class="card course reveal">
@@ -322,7 +317,7 @@
           <div class="card-body">
             <h3 class="card-title">AI &amp; ML with Python</h3>
             <p class="scope"><span>Future Scope</span>ML Engineer, AI Research</p>
-            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="#book" data-book="AI &amp; ML with Python" class="link-arrow">Enroll Now</a></div>
           </div>
         </article>
         <article class="card course reveal">
@@ -330,7 +325,7 @@
           <div class="card-body">
             <h3 class="card-title">App &amp; Game Development</h3>
             <p class="scope"><span>Future Scope</span>Game Dev, Mobile Apps</p>
-            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="link-arrow">Enroll Now</a></div>
+            <div class="card-foot"><span class="cert">Certification: Provided</span><a href="#book" data-book="App &amp; Game Development" class="link-arrow">Enroll Now</a></div>
           </div>
         </article>
       </div>
@@ -339,7 +334,6 @@
     <!-- Reviews -->
     <section class="chapter" id="reviews">
       <div class="chapter-head center reveal">
-        <p class="chapter-no">04 — Reviews</p>
         <h2 class="chapter-title">Listen To Our Happy Parents and Students</h2>
       </div>
       <div class="reviews">
@@ -391,17 +385,15 @@
     <!-- Demo -->
     <section class="chapter" id="demo">
       <div class="demo-card panel reveal">
-        <p class="chapter-no">05 — Free Demo</p>
         <h2 class="chapter-title">Book a Free Demo</h2>
-        <p class="demo-text">Click below to fill out the form and schedule a session with us.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScweSZrWtgl4P6jHUgDKKOFwaylpiC7q-j8aCIbwJVNfXNQNw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Get Started</a>
+        <p class="demo-text">Fill in a short form and we’ll schedule a session with you.</p>
+        <a href="#book" data-book="" class="btn btn-gold btn-lg">Get Started</a>
       </div>
     </section>
 
     <!-- Contact -->
     <section class="chapter" id="contact">
       <div class="chapter-head center reveal">
-        <p class="chapter-no">06 — Contact</p>
         <h2 class="chapter-title">Contact Us</h2>
       </div>
       <div class="social-links reveal">
@@ -418,12 +410,135 @@
     <p>&copy;CodeBloom<small>APP</small></p>
   </footer>
 
-  <!-- Time-of-day readout for the 3D scene -->
-  <div class="hud" id="hud" hidden>
-    <span class="hud-dot" aria-hidden="true"></span>
-    <span class="hud-phase" id="hudPhase">Golden hour</span>
-    <span class="hud-clock" id="hudClock">17:35</span>
-    <button type="button" class="hud-btn" id="sceneToggle" aria-pressed="false">Pause</button>
-  </div>
+  <!-- Stops the background animation -->
+  <button type="button" class="motion-toggle" id="sceneToggle" aria-pressed="false" hidden>Pause animation</button>
+
+  <!-- Book a free demo: saved straight to a Google Sheet (see google-apps-script/Code.gs) -->
+  <dialog class="book-dialog" id="book" aria-labelledby="bookTitle">
+    <div class="book-shell">
+      <button type="button" class="book-close" data-close aria-label="Close">&times;</button>
+
+      <div class="book-step" id="bookStep">
+        <p class="eyebrow"><span class="petal-mark" aria-hidden="true"></span>Free demo class</p>
+        <h2 class="book-title" id="bookTitle">Book your free coding demo</h2>
+        <p class="book-lede">Tell us a little about the learner and we’ll get in touch to set up a time.</p>
+
+        <form class="book-form" id="bookForm" novalidate>
+          <div class="field">
+            <label for="parentName">Parent / guardian name</label>
+            <input id="parentName" name="parentName" type="text" autocomplete="name" required maxlength="80">
+            <span class="field-error">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label for="studentName">Student’s name</label>
+            <input id="studentName" name="studentName" type="text" required maxlength="80">
+            <span class="field-error">Please enter the student’s name.</span>
+          </div>
+          <div class="field">
+            <label for="phone">Phone (WhatsApp)</label>
+            <div class="phone-row">
+              <select name="countryCode" aria-label="Country code">
+                <option value="+91" selected>+91 IN</option>
+                <option value="+1">+1 US/CA</option>
+                <option value="+44">+44 UK</option>
+                <option value="+971">+971 AE</option>
+                <option value="+966">+966 SA</option>
+                <option value="+974">+974 QA</option>
+                <option value="+965">+965 KW</option>
+                <option value="+968">+968 OM</option>
+                <option value="+973">+973 BH</option>
+                <option value="+61">+61 AU</option>
+                <option value="+65">+65 SG</option>
+              </select>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" required pattern="[0-9][0-9 \-]{5,16}" placeholder="98765 43210">
+            </div>
+            <span class="field-error">Please enter a valid phone number.</span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required maxlength="120">
+            <span class="field-error">Please enter a valid email address.</span>
+          </div>
+          <div class="field">
+            <label for="studentAge">Student’s age</label>
+            <select id="studentAge" name="studentAge" required>
+              <option value="" selected disabled>Select age</option>
+              <option>6–8 years</option>
+              <option>9–11 years</option>
+              <option>12–14 years</option>
+              <option>15–17 years</option>
+              <option>18+ (college / working professional)</option>
+            </select>
+            <span class="field-error">Please choose an age group.</span>
+          </div>
+          <div class="field">
+            <label for="course">Course of interest</label>
+            <select id="course" name="course">
+              <option value="Not sure yet">Not sure yet — help me choose</option>
+              <optgroup label="Levels">
+                <option>Beginner Level</option>
+                <option>Advanced Level</option>
+                <option>Professional Level</option>
+              </optgroup>
+              <optgroup label="Specialised courses">
+                <option>Python Programming</option>
+                <option>Cloud Computing</option>
+                <option>Data Science</option>
+                <option>Java Programming</option>
+                <option>React.js</option>
+                <option>JavaScript</option>
+                <option>Cyber Security</option>
+                <option>AI &amp; ML with Python</option>
+                <option>App &amp; Game Development</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="field">
+            <label for="preferredTime">Preferred demo time</label>
+            <select id="preferredTime" name="preferredTime">
+              <option value="Any time">Any time</option>
+              <option>Weekday morning</option>
+              <option>Weekday afternoon</option>
+              <option>Weekday evening</option>
+              <option>Weekend</option>
+            </select>
+          </div>
+          <fieldset class="field">
+            <legend>Laptop or desktop available?</legend>
+            <div class="choice-row">
+              <label class="choice"><input type="radio" name="hasLaptop" value="Yes" required><span>Yes</span></label>
+              <label class="choice"><input type="radio" name="hasLaptop" value="No"><span>No</span></label>
+            </div>
+            <span class="field-error">Please choose one.</span>
+          </fieldset>
+          <div class="field field-wide">
+            <label for="message">Anything we should know? <span class="optional">(optional)</span></label>
+            <textarea id="message" name="message" rows="3" maxlength="1000"></textarea>
+          </div>
+          <!-- Left empty by people; bots fill it in -->
+          <div class="trap" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="book-actions field-wide">
+            <button type="submit" class="btn btn-gold btn-lg" id="bookSubmit">Book my free demo</button>
+            <p class="book-note">We’ll only use these details to arrange your demo.</p>
+          </div>
+          <p class="book-error field-wide" id="bookError" role="alert" hidden>
+            Sorry, we couldn’t send your booking. Please try again, or message us on
+            <a href="https://wa.me/message/LM34W22UDTK4C1" target="_blank" rel="noopener">WhatsApp</a>.
+          </p>
+        </form>
+      </div>
+
+      <div class="book-done" id="bookDone" hidden tabindex="-1">
+        <div class="done-mark" aria-hidden="true">✓</div>
+        <h2 class="book-title">You’re booked in!</h2>
+        <p class="book-lede">Thanks, <span id="doneName">there</span>. We’ve received your request and will contact you on WhatsApp or email to confirm your free demo.</p>
+        <button type="button" class="btn btn-ghost" data-close>Back to the site</button>
+      </div>
+    </div>
+  </dialog>
 </body>
 </html>
