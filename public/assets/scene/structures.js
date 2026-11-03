@@ -1,7 +1,7 @@
 // Hand-built landmarks: red arched bridge, five-storey pagoda, torii gate,
 // temple hall, stone lanterns and the boat. Everything is merged per material.
 import * as THREE from 'three';
-import { mergeGeometries } from '/vendor/three/addons/BufferGeometryUtils.js';
+import { mergeGeometries } from '../../vendor/three/addons/BufferGeometryUtils.js';
 import { heightAt, riverX, riverSlope, riverHalfWidth, bankPoint, random, Z_START, Z_END } from './world.js';
 
 export const BRIDGE_Z = 128;

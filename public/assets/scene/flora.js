@@ -1,6 +1,6 @@
 // Sakura, broadleaf and pine trees, riverbank grass and rocks — all instanced.
 import * as THREE from 'three';
-import { mergeGeometries, mergeVertices } from '/vendor/three/addons/BufferGeometryUtils.js';
+import { mergeGeometries, mergeVertices } from '../../vendor/three/addons/BufferGeometryUtils.js';
 import { heightAt, riverX, riverHalfWidth, bankRatio, noise2, fbm, random, TERRAIN, Z_START, Z_END } from './world.js';
 import { clearings } from './structures.js';
 

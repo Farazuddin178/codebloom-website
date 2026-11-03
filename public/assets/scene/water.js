@@ -1,7 +1,7 @@
 // River surface: planar reflection (desktop) or sky-tinted fallback (mobile),
 // animated ripples flowing downstream, shoreline foam and the boat's wake.
 import * as THREE from 'three';
-import { Reflector } from '/vendor/three/addons/Reflector.js';
+import { Reflector } from '../../vendor/three/addons/Reflector.js';
 import { TERRAIN } from './world.js';
 import { RIVER_GLSL, NOISE_GLSL, FOG_GLSL } from './glsl.js';
 
